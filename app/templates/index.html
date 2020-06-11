@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h1>Hi, {{ current_user.username }}!</h1>
+    {% for post in posts %}
+        <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+    {% endfor%}
+{% endblock %}
+
+<!--两个花括号中间的内容是动态的，只有在运行时才知道具体表现成什么样子-->
